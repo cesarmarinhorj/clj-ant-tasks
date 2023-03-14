@@ -10,7 +10,7 @@
   "Creates random string containing 0-9, a-z, A-Z"
   ([] (random-alphanumeric-str 8))
   ([n]
-   (let [chars (map char (concat (range 48 57) (range 65 90) (range 97 122)))
+   (let [chars (map char (concat (range 48 58) (range 65 91) (range 97 123)))
          random-chars (take n (repeatedly #(rand-nth chars)))]
      (reduce str random-chars))))
 
